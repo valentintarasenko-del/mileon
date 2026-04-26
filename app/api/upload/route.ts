@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServerSupabase } from '@/lib/supabase'
 
+export const dynamic = 'force-dynamic'
+
 // POST /api/upload — загружает фото в Supabase Storage, возвращает публичный URL
 export async function POST(req: NextRequest) {
   const formData = await req.formData()

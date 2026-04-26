@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createServerSupabase } from '@/lib/supabase'
 import { randomBytes } from 'crypto'
 
+export const dynamic = 'force-dynamic'
+
 // GET /api/users?id=xxx — получить пользователя по ID
 export async function GET(req: NextRequest) {
   const id = req.nextUrl.searchParams.get('id')

@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServerSupabase } from '@/lib/supabase'
 
+export const dynamic = 'force-dynamic'
+
 // GET /api/listings — все объявления или только одного пользователя (?userId=xxx)
 export async function GET(req: NextRequest) {
   const userId = req.nextUrl.searchParams.get('userId')

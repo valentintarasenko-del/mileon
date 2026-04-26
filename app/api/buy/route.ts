@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServerSupabase } from '@/lib/supabase'
 
+export const dynamic = 'force-dynamic'
+
 // POST /api/buy — купить игрушку: списать монеты у покупателя, зачислить продавцу
 export async function POST(req: NextRequest) {
   const { listingId, buyerId } = await req.json()
