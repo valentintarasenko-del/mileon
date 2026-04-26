@@ -1,0 +1,14 @@
+# Зависимости
+/node_modules
+
+# Next.js
+/.next/
+/out/
+
+# Секреты — НИКОГДА не загружай!
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
