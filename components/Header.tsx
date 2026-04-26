@@ -45,6 +45,9 @@ export default function Header() {
             <Link href="/profile" className="hover:text-yellow-300 transition-colors">
               👤 Мои игрушки
             </Link>
+            <Link href="/team" className="hover:text-yellow-300 transition-colors">
+              🌟 Команда
+            </Link>
           </div>
         </nav>
       )}
