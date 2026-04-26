@@ -134,7 +134,7 @@ function SwapModal({ listing, userId, onClose }: { listing: Listing; userId: str
   useEffect(() => {
     fetch(`/api/listings?userId=${userId}`)
       .then(r => r.json())
-      .then(data => setMyListings(data.filter((l: Listing) => !l.sold && l.id !== listing.id)))
+      .then(data => setMyListings(Array.isArray(data) ? data.filter((l: Listing) => !l.sold && l.id !== listing.id) : []))
       .finally(() => setLoading(false))
   }, [userId, listing.id])
 

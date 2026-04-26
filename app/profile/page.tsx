@@ -14,7 +14,7 @@ export default function ProfilePage() {
     if (!user) return
     fetch(`/api/listings?userId=${user.id}`)
       .then(r => r.json())
-      .then(data => setListings(data))
+      .then(data => setListings(Array.isArray(data) ? data : []))
       .finally(() => setLoading(false))
   }, [user])
 
