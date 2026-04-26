@@ -10,7 +10,7 @@ export async function GET(req: NextRequest) {
 
   let query = supabase
     .from('listings')
-    .select('*, users(name, emoji)')
+    .select('*, users!listings_user_id_fkey(name, emoji)')
     .order('created_at', { ascending: false })
 
   if (userId) {
